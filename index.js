@@ -3,9 +3,16 @@
 const Input = require('./lib/input.js');
 const Notes = require('./lib/notes.js');
 
-const newInput = new Input();
+const input = new Input();
+const notes = new Notes(input);
 
-newInput.validateInput() ? Notes.action(newInput) : help();
+
+
+if (input.valid()) {
+  notes.execute();
+} else {
+  help();
+}
 
 function help() {
   console.log(`It's broken!`);
