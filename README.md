@@ -1,25 +1,22 @@
-# LAB - 00
+# LAB - 01
 
 ## Notes
 
 ### Author: Susanna Lakey
 
 ### Links and Resources
-* [submission PR](https://github.com/susannalakey-401-advanced-javascript/lab-00/pulls)
+* [submission PR](https://github.com/susannalakey-401-advanced-javascript/notes/pull/1)
 
 
 
 
 #### How to initialize/run your server app (where applicable)
-* `npm start`
-* Endpoint : '/'
-    *Returns a boolean
-* Endpoint: 'docs'
-    *Returns JSDoc documentation pages
+* `npm install uuid minimist  `
+
   
 #### Tests
 * Unit Tests: 'npm test'
 * Lint Tests: 'npm run lint'
 
 #### UML
-![UML Diagram](/UML.jpg)
+![UML Diagram](./Lab-01-UML.jpg)
