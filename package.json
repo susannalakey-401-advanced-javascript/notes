@@ -1,0 +1,29 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/susannalakey-401-advanced-javascript/notes.git"
+  },
+  "author": "Susanna Lakey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/susannalakey-401-advanced-javascript/notes/issues"
+  },
+  "homepage": "https://github.com/susannalakey-401-advanced-javascript/notes#readme",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "minimist": "^1.2.0"
+  }
+}
