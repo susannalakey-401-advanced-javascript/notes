@@ -17,6 +17,7 @@
 #### Tests
 * Unit Tests: 'npm test'
 * Lint Tests: 'npm run lint'
+*
 
 #### UML
 ![UML Diagram](./Lab-01-UML.jpg)
