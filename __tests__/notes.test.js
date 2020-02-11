@@ -1,11 +1,26 @@
-const Note = require('../lib/notes.js');
+const Notes = require('../lib/notes.js');
 
 
+// spy looks for if something was called
 
-describe('add()', () => {
-  it('console logs the text of the note', () => {
-    const note = new Note();
+jest.spyOn(global.console, 'log');
 
-    expect(note.add()).toEqual(this.payload);
+// check that execute function does nothing if user gave invalid input
+
+describe('Notes Module', () => {
+  it('execute() does nothing when the options are invalid', () => {
+    const thisCommandWillFail = { command: { 'x': 'banana' } };
+    const notes = new Notes(thisCommandWillFail);
+    notes.execute();
+    expect(console.log()).not.toHaveBeenCalled;
   });
-})
+  it('Notes.prototype.add() can add a note', () => {
+    const action = 'add';
+    const payload = 'this will succeed';
+    const notes = new Notes({ command: { action: action, payload: payload } });
+    notes.execute();
+    expect(console.log).toHaveBeenCalledWith(`adding note: ${payload}`);
+  });
+
+
+});
