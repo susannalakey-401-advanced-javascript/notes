@@ -11,7 +11,7 @@
 
 
 #### How to initialize/run your server app (where applicable)
-* `npm install minimist  `
+* `npm install minimist mongoose `
 
   
 #### Tests
@@ -20,5 +20,4 @@
 
 #### UML
 ![Lab 01 UML Diagram](./Lab-01-UML.jpg)
-![Lab 02 UML Diagram](./Lab-02-UML.jpg
-)
+![Lab 02 UML Diagram](./Lab-02-UML.jpg)
