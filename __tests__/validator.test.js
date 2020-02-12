@@ -4,8 +4,6 @@ const validator = new Validator();
 
 
 
-// revisit organization of these tests
-
 describe('isObject()', () => {
   it('isObject() should return true if it is an object', () => {
     const anObject = {};
@@ -49,19 +47,52 @@ describe('isString()', () => {
   });
 });
 
-describe('isRequired()', () => {
-  it('has a value present if isRequired() is set to true', () => {
+
+
+describe('validate()', () => {
+  let validator;
+
+  beforeEach(() => {
     const schema = {
       action: { type: 'string', required: true },
-      payload: { type: 'string', required: true },
+      payload: { type: 'string', required: false },
+      foo: { type: 'number', required: false },
     };
+    validator = new Validator(schema);
+  });
+
+  it('returns true when required fields are present', () => {
     const validObject = {
       action: 'add',
       payload: 'This is a really cool thing that I wanted to remember for later',
     };
-    expect(validator.isRequired(schema, validObject)).toBeTruthy();
+    expect(validator.validate(validObject)).toBeTruthy();
+  });
+
+  it('returns false when required fields are not present', () => {
+    const invalidObject = {
+      payload: 'This is a really cool thing that I wanted to remember for later',
+    };
+    expect(validator.validate(invalidObject)).toBeFalsy();
+  });
+
+  it('returns true when given the correct type', () => {
+    const validObject = {
+      action: 'add',
+      payload: 'This is a really cool thing that I wanted to remember for later',
+    };
+    expect(validator.validate(validObject)).toBeTruthy();
+  });
+
+  it('returns false when given the incorrect type', () => {
+    const invalidType = {
+      action: 5,
+      payload: [],
+    };
+    expect(validator.validate(invalidType)).toBeFalsy();
   });
 });
+
 
 
 
@@ -79,28 +110,6 @@ describe('isRequired()', () => {
 // };
 
 
-// const personRules = {
-//   id: { type: 'string', required: true },
-//   name: { type: 'string', required: true },
-//   age: { type: 'number', required: true },
-//   children: { type: 'array', valueType: 'string' },
-// };
-
-// Valid
-// const susan = {
-//   id:'123-45-6789',
-//   name:'Susan McDeveloperson',
-//   age: 37,
-//   children:[],
-// };
-
-
-// Invalid
-// const fred = {
-//   id:38,
-//   name:'Freddy McCoder',
-//   children:[],
-// };
 
 // Things we want to be able to validate
 // Is the object we’re trying to validate actually an object?
