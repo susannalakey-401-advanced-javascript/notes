@@ -55,8 +55,7 @@ describe('validate()', () => {
   beforeEach(() => {
     const schema = {
       action: { type: 'string', required: true },
-      payload: { type: 'string', required: false },
-      foo: { type: 'number', required: false },
+      payload: { type: 'string', required: true },
     };
     validator = new Validator(schema);
   });
