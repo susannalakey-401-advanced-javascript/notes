@@ -1,12 +1,9 @@
 const mongoose = require('mongoose');
 
 const noteSchema = mongoose.Schema({
-  action: { type: String, required: true },
-  payload: { type: String, required: true },
-  category: { type: String, required: false },
+  category: { type: String, required: false, default: 'uncategorized' },
+  text: { type: String, required: true },
 });
 
-
-
-module.exports = mongoose.model('noteSchema', noteSchema);
+module.exports = mongoose.model('note', noteSchema);
 
