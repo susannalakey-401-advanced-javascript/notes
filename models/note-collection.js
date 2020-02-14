@@ -4,7 +4,7 @@ const NotesModel = require('./note-model');
 class Note {
   constructor() { }
 
-  async get(category) {
+  get(category) {
     const query = NotesModel.find(category ? { category } : {});
     return query.exec();
   }

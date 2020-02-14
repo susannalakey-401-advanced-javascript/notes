@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --env=node"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,8 @@
     "mongoose": "5.8.11",
     "uuid": "^3.4.0",
     "@code-fellows/supergoose": "1.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }

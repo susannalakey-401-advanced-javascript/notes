@@ -25,7 +25,7 @@ describe('Input Module', () => {
     });
   });
 
-  fit('parseInput() returns a properly formed object with long arguments', () => {
+  it('parseInput() returns a properly formed object with long arguments', () => {
     const input = new Input(['--add', 'this should succeed']);
     expect(input.command).toEqual({
       action: 'add',
