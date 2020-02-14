@@ -1,6 +1,6 @@
 const Notes = require('../lib/notes.js');
 
-require('@code-fellows/supergoose');
+// require('@code-fellows/supergoose');
 
 // spy looks for if something was called
 
@@ -14,7 +14,7 @@ describe('Notes Module', () => {
     const thisCommandWillFail = { command: { 'x': 'banana' } };
     const notes = new Notes(thisCommandWillFail);
     notes.execute();
-    expect(console.log()).not.toHaveBeenCalled();
+    expect(console.log).not.toHaveBeenCalled();
   });
 
   it('Notes.prototype.add() can add a note', () => {

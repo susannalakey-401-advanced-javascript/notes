@@ -1,0 +1,1 @@
+require('@code-fellows/supergoose');
