@@ -1,13 +1,14 @@
 {
   "name": "notes",
   "version": "1.0.0",
-  "description": "",
+  "description": "A command-line note taking app",
+  "bin": {},
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest --env=node"
+    "test": "jest --env=node --verbose"
   },
   "repository": {
     "type": "git",

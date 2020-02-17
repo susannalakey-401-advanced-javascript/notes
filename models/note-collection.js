@@ -16,12 +16,12 @@ class Note {
 
   update(id, record) {
     return NotesModel.findByIdAndUpdate(id, record, { new: true });
-    // query exec?
+
   }
 
   delete(id) {
-    const query = NotesModel.findByIdAndDelete(id);
-    return query.exec();
+    return NotesModel.findByIdAndDelete(id);
+
   }
 }
 

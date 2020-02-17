@@ -2,6 +2,7 @@
 
 jest.spyOn(global.console, 'log');
 
+
 // check that execute function does nothing if user gave invalid input
 
 describe('Notes Module', () => {
@@ -20,12 +21,33 @@ describe('Notes Module', () => {
     expect(console.log).not.toHaveBeenCalled();
   });
 
-  it('Notes.prototype.add() can add a note', () => {
+  it('add() can add a note', () => {
     const action = 'add';
     const payload = 'this will succeed';
     const notes = new Notes({ command: { action: action, payload: payload } });
     notes.execute();
     expect(console.log).toHaveBeenCalledWith(`adding note: ${payload}`);
+  });
+
+  it('delete() can delete an entry', () => {
+    const action = 'delete';
+    const id = '12345';
+    const notes = new Notes({ command: { action: action, payload: id } });
+    // console.log('delete test ', notes);
+    notes.execute();
+    expect(console.log).toHaveBeenCalledWith('Note deleted at ID: ', id);
+  });
+
+  it('list() can list all entries', () => {
+
+  });
+
+  it('list() can list entries when given a category', () => {
+
+  });
+
+  it('update() will change the contents of the text of an entry', () => {
+
   });
 
 
