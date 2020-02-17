@@ -16,7 +16,9 @@ class Note {
   }
 
   update(id, record) {
-    return NotesModel.findByIdAndUpdate(id, { record }, { new: true });
+    return NotesModel.findByIdAndUpdate(id, {
+      $set: { text: record },
+    }, { new: true });
 
   }
 

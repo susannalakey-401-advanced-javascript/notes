@@ -29,7 +29,7 @@ describe('Notes Module', () => {
     expect(console.log).toHaveBeenCalledWith(`adding note: ${payload}`);
   });
 
-  it('delete() can delete an entry', () => {
+  xit('delete() can delete an entry', () => {
     const action = 'delete';
     const id = '12345';
     const notes = new Notes({ command: { action: action, payload: id } });
@@ -38,15 +38,15 @@ describe('Notes Module', () => {
     expect(console.log).toHaveBeenCalledWith('Note deleted at ID: ', id);
   });
 
-  it('list() can list all entries', () => {
+  xit('list() can list all entries', () => {
 
   });
 
-  it('list() can list entries when given a category', () => {
+  xit('list() can list entries when given a category', () => {
 
   });
 
-  it('update() will change the contents of the text of an entry', () => {
+  xit('update() will change the contents of the text of an entry', () => {
 
   });
 
