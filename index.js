@@ -20,7 +20,7 @@ if (input.valid()) {
     .then(() => {
       return mongoose.disconnect();
     })
-    .catch(error => { console.error(error); })
+    .catch(error => { console.error(error); });
 } else {
   help();
 }

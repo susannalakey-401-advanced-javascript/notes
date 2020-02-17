@@ -5,8 +5,9 @@ class Note {
   constructor() { }
 
   get(category) {
-    const query = NotesModel.find(category ? { category } : {});
-    return query.exec();
+
+    return NotesModel.find(category ? { category } : {});
+
   }
 
   create(data) {
@@ -15,7 +16,7 @@ class Note {
   }
 
   update(id, record) {
-    return NotesModel.findByIdAndUpdate(id, record, { new: true });
+    return NotesModel.findByIdAndUpdate(id, { record }, { new: true });
 
   }
 
