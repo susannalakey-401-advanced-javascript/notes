@@ -29,26 +29,26 @@ describe('Notes Module', () => {
     expect(console.log).toHaveBeenCalledWith(`adding note: ${payload}`);
   });
 
-  xit('delete() can delete an entry', () => {
-    const action = 'delete';
-    const id = '12345';
-    const notes = new Notes({ command: { action: action, payload: id } });
-    // console.log('delete test ', notes);
-    notes.execute();
-    expect(console.log).toHaveBeenCalledWith('Note deleted at ID: ', id);
-  });
+  // xit('delete() can delete an entry', () => {
+  //   const action = 'delete';
+  //   const id = '12345';
+  //   const notes = new Notes({ command: { action: action, payload: id } });
+  //   // console.log('delete test ', notes);
+  //   notes.execute();
+  //   expect(console.log).toHaveBeenCalledWith('Note deleted at ID: ', id);
+  // });
 
-  xit('list() can list all entries', () => {
+  // xit('list() can list all entries', () => {
 
-  });
+  // });
 
-  xit('list() can list entries when given a category', () => {
+  // xit('list() can list entries when given a category', () => {
 
-  });
+  // });
 
-  xit('update() will change the contents of the text of an entry', () => {
+  // xit('update() will change the contents of the text of an entry', () => {
 
-  });
+  // });
 
 
 });

@@ -36,5 +36,5 @@
 
 
 ### Links and Resources
-* [submission PR](https://github.com/susannalakey-401-advanced-javascript/notes/pull/1)
-* Help from Ben Lakey on how to organize tests when writing them.
+* [submission PR](https://github.com/susannalakey-401-advanced-javascript/notes/pull/5)
+* Help from Ben Lakey on how to organize tests.
