@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const mongoose = require('mongoose');
 const MONGOOSE_URI = 'mongodb://localhost:27017/notes';
 mongoose.connect(MONGOOSE_URI, { useNewUrlParser: true, useUnifiedTopology: true });

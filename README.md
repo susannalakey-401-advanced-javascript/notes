@@ -1,6 +1,5 @@
-# LAB - 02
 
-## Notes
+## Notesy Application
 
 ### Author: Susanna Lakey
 

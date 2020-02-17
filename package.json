@@ -1,8 +1,10 @@
 {
-  "name": "notes",
+  "name": "@slakey/notesy",
   "version": "1.0.0",
   "description": "A command-line note taking app",
-  "bin": {},
+  "bin": {
+    "notesy": "index.js"
+  },
   "main": "index.js",
   "directories": {
     "lib": "lib"
