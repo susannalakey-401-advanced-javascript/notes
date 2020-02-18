@@ -1,13 +1,17 @@
 {
-  "name": "notes",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@slakey/notesy",
+  "version": "1.0.1",
+  "description": "A command-line note taking app",
+  "bin": {
+    "notesy": "index.js"
+  },
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --env=node --verbose",
+    "watch": "jest --watch --env=node --verbose"
   },
   "repository": {
     "type": "git",
@@ -23,8 +27,14 @@
     "jest": "^25.1.0"
   },
   "dependencies": {
+    "@code-fellows/supergoose": "1.0.1",
     "eslint": "^6.8.0",
     "minimist": "^1.2.0",
+    "mongoose": "5.8.11",
+    "node": "^13.8.0",
     "uuid": "^3.4.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
