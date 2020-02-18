@@ -1,6 +1,6 @@
 {
   "name": "@slakey/notesy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A command-line note taking app",
   "bin": {
     "notesy": "index.js"
@@ -10,7 +10,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest --env=node --verbose"
+    "test": "jest --env=node --verbose",
+    "watch": "jest --watch --env=node --verbose"
   },
   "repository": {
     "type": "git",

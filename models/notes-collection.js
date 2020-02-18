@@ -1,13 +1,10 @@
 const NotesModel = require('./note-model');
 
-
-class Note {
+class NotesCollection {
   constructor() { }
 
   get(category) {
-
     return NotesModel.find(category ? { category } : {});
-
   }
 
   create(data) {
@@ -19,13 +16,11 @@ class Note {
     return NotesModel.findByIdAndUpdate(id, {
       $set: { text: record },
     }, { new: true });
-
   }
 
   delete(id) {
     return NotesModel.findByIdAndDelete(id);
-
   }
 }
 
-module.exports = Note;
+module.exports = NotesCollection;
